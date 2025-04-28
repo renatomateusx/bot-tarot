@@ -142,7 +142,7 @@ venv/
 
 ## 📸 Samples
 
-![Sample 1] <img width="1051" alt="image1" src="https://github.com/user-attachments/assets/d005f96d-c28e-4cff-9d38-42de13253543" />
+<img width="1051" alt="image1" src="https://github.com/user-attachments/assets/d005f96d-c28e-4cff-9d38-42de13253543" />
 
 
 ![Sample 2](./image2.png)
