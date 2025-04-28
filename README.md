@@ -142,4 +142,4 @@ venv/
 
 ## 📸 Samples
 
-![Architecture Diagram](image1.png)
+![Architecture Diagram](Sample1.png)
