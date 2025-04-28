@@ -1,0 +1,30 @@
+# .gitignore
+
+```
+# Python
+__pycache__/
+*.py[cod]
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Virtual Environment
+.venv/
+env/
+ENV/
+venv/
+.idea/
+.vscode/
+
+# Environment Variables
+.env
+
+# Logs
+*.log
+
+# MacOS
+.DS_Store
+
+# Others
+*.sqlite3

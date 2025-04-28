@@ -1,0 +1,8 @@
+Django>=4.2,<5.0
+python-dotenv>=1.0.0
+requests>=2.31.0
+firebase-admin>=6.4.0
+openai>=1.10.0
+twilio
+apscheduler
+pillow

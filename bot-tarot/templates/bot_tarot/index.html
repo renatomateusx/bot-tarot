@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Consultations</title>
+</head>
+<body>
+    <h1>Consultations</h1>
+    <ul>
+        {% for consultation in consultations %}
+            <li>{{ consultation.user_name }} - {{ consultation.question }} - {{ consultation.consultation_date }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
