@@ -10,8 +10,8 @@ Users subscribe through a recurring payment and receive:
 
 ## 📸 Samples
 
-[Sample 1](Sample1.png)
-[Sample 2](Sample2.png)
+![Sample 1](Sample1.png)
+![Sample 2](Sample2.png)
 
 
 
