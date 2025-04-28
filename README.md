@@ -7,6 +7,14 @@ Users subscribe through a recurring payment and receive:
 - A **weekly personalized tarot reading** via WhatsApp (text, image, and optionally voice message).
 - The right to ask **3 personal questions per month**, answered with tarot insights.
 
+
+## 📸 Samples
+
+[Sample 1](Sample1.png)
+[Sample 2](Sample2.png)
+
+
+
 The service integrates:
 - WhatsApp communication (Twilio API)
 - Payment processing (PayPal/Stripe Webhooks)
@@ -140,6 +148,4 @@ venv/
 *.sqlite3
 
 
-## 📸 Samples
 
-![Architecture Diagram](Sample1.png)
