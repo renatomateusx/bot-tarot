@@ -142,9 +142,4 @@ venv/
 
 ## 📸 Samples
 
-[<img width="1051" alt="Sample 1" src="https://github.com/user-attachments/assets/d005f96d-c28e-4cff-9d38-42de13253543" />](https://github.com/renatomateusx/bot-tarot/blob/master/image1.png)
-
-<img width="1051" alt="Sample 2" src="https://github.com/user-attachments/assets/1c1608dc-0693-4395-9de8-a946a21439f9" />
-
-
-![Sample 2](./image2.png)
+![Architecture Diagram](image1.png)
