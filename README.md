@@ -138,3 +138,11 @@ venv/
 
 # Others
 *.sqlite3
+
+
+## 📸 Samples
+
+
+![Sample 1](./image1.png)
+
+![Sample 2](./image2.png)
