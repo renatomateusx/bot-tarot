@@ -8,11 +8,45 @@ Users subscribe through a recurring payment and receive:
 - The right to ask **3 personal questions per month**, answered with tarot insights.
 
 
-## 📸 Samples
+## 📸 Architecture
 
-![Sample 1](image1.png)
-![Sample 2](image2.png)
+![Architecture Diagram](ArchitectureDiagram.png)
 
+## System Architecture
+
+The Tarot Bot system is designed to provide a seamless experience for users interacting via WhatsApp. It integrates multiple cloud services to handle messaging, dynamic tarot reading generation, user management, and payment processing.
+
+### Architecture Overview
+
+- **User Interaction (WhatsApp)**:  
+  Users interact with the bot through WhatsApp. All incoming and outgoing messages are managed through Twilio's WhatsApp API.
+
+- **Twilio API**:  
+  Twilio handles message delivery and reception. Incoming user messages are forwarded to the backend, and responses are sent back via Twilio. The user's phone number is used as their unique identifier across the system.
+
+- **Backend (FastAPI)**:  
+  The FastAPI server processes webhook events from Twilio (incoming messages) and Stripe/PayPal (payment updates). It interacts with Firebase to manage user state, track subscription status, and trigger OpenAI for dynamic tarot readings.
+
+- **Firebase**:  
+  Firebase serves as the real-time database and user management system. It stores user profiles, subscription status, questions, answers, and the next eligible consultation date.
+
+- **Stripe API (or PayPal)**:  
+  Stripe or PayPal handles recurring billing. Payment success or failure events are sent via webhooks to the backend, which updates user subscription data in Firebase accordingly.
+
+- **OpenAI API (ChatGPT)**:  
+  The backend calls OpenAI’s API to generate customized tarot readings based on randomly selected cards or user-submitted questions.
+
+- **Scheduled Messages (Weekly Tarot Readings)**:  
+  Every Sunday or Monday, the backend fetches active users from Firebase and sends a weekly tarot insight via Twilio.
+
+- **Error Handling and Logging**:  
+  All major actions (payment processing, message handling, AI responses) are logged to ensure reliability, monitor failures, and aid in debugging.
+
+### Key Data Flows
+
+1. **User sends a message → Twilio Webhook → Backend → Firebase Check → AI Generation → Reply via Twilio**  
+2. **User subscribes → Stripe/PayPal Payment → Payment Webhook → Backend → Update Firebase**  
+3. **Scheduled event → Backend fetches active users → Generate weekly reading → Send via Twilio**
 
 
 The service integrates:
@@ -116,36 +150,7 @@ MIT License - feel free to use and adapt.
 
 ---
 
-# .gitignore
+## 📸 Samples
 
-```
-# Python
-__pycache__/
-*.py[cod]
-*.egg
-*.egg-info/
-dist/
-build/
-
-# Virtual Environment
-.venv/
-env/
-ENV/
-venv/
-.idea/
-.vscode/
-
-# Environment Variables
-.env
-
-# Logs
-*.log
-
-# MacOS
-.DS_Store
-
-# Others
-*.sqlite3
-
-
-
+![Sample 1](image1.png)
+![Sample 2](image2.png)
